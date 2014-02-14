@@ -1,0 +1,9 @@
+<h1>Go Get Yourself Some <%= @ingredient.name %>!</h1>
+
+<%= form_tag "/ingredients/@ingredient.id" do %>
+  <%= label_tag :neighborhood, "Neighborhood" %>
+  <%= text_field_tag(:neighborhood) %>
+  <%= submit_tag("submit!") %>
+  <% end %>
+
+<p><%= link_to "Back To Our Super Trendy Ingredients Index!", ingredients_path %></p>

@@ -1,0 +1,15 @@
+<%= link_to "Add A New Ingredient!", new_ingredient_path %>
+<h1>Ingredients Index!</h1>
+
+<ul>
+  <%= @ingredients.each do |ingredient| %>
+  <a href="/ingredients/<%= ingredient.id %>">
+  <li><%= ingredient.name %></li>
+  <li><img src="<%= ingredient.photo_url %>" width="400"></a></li>
+  </a>
+  <%end %>
+
+</ul>
+
+
+

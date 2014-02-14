@@ -1,0 +1,11 @@
+<%= form_for @ingredient do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</br>
+
+<%= f.label :photo_url %>
+<%= f.text_field :photo_url %>
+</br>
+
+  <%= f.submit @ingredient.id.nil? ? "Add!" : "Save Changes" %>
+<% end %>
