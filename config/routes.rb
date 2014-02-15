@@ -2,8 +2,13 @@ OnTheSide::Application.routes.draw do
 
   resources :users
 
-  resources :ingredients
-  post "/ingredients", to: "ingredients#search"
+  resources :ingredients do
+    member do
+      post :neighborhood
+    end
+  end
+  # get "/ingredients", to: "ingredients#search"
+  # post "/ingredients", to: "ingredients#search"
 
 
   get "/login", to: "sessions#new"

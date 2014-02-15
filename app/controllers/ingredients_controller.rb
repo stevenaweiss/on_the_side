@@ -1,6 +1,6 @@
 class IngredientsController < ApplicationController
 
-before_action :load_ingredient, only: [:show, :edit, :update, :destroy]
+before_action :load_ingredient, only: [:show, :edit, :update, :destroy, :neighborhood]
 
       def index
         @ingredients = Ingredient.all
@@ -8,8 +8,15 @@ before_action :load_ingredient, only: [:show, :edit, :update, :destroy]
       end
 
       def show
-        #call API here
+        
         render(:show)
+      end
+
+      def neighborhood
+        #binding.pry
+        #call api method HERE
+        @neighborhood = params[:neighborhood]
+        @food = @ingredient.name
       end
 
       def new
