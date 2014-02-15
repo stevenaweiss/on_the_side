@@ -2,3 +2,8 @@
 
 <%= @neighborhood %>
 <%= @food %>
+
+
+<%=  @restaurants["response"]["groups"][0]["items"].each do |restaurant|  %>
+       <%=   puts restaurant["venue"]["name"]  %> 
+          <% end   %>

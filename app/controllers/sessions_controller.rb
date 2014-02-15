@@ -8,13 +8,14 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user && (user.authenticate(params[:password]) ) 
-      #save the user id in the session has h
-      session[:user_id] = user.id
-      #redirect to that users home page
-      redirect_to( user_path(user) )
-    else
       
+      session[:user_id] = user.id
+      
+      redirect_to( user_path(user) )  #or to index or wherever
+    else
+      #render :text => "Wrong"
       #@message = "We don't have that combo!"
+      redirect_to root_path
     end
 
   end

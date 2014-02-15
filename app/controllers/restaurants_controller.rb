@@ -9,7 +9,7 @@ end
 def create
   @restaurant = Restaurant.new(restaurant_params)
   @restaurant.ingredient = @ingredient
-  @restaurant.
+  #@restaurant.
 end
 
 
