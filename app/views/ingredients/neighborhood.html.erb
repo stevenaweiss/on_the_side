@@ -1,12 +1,15 @@
 <h1><%= @food %> in <%= @neighborhood %>!!!!</h1>
 
-
-
 <ul>
-
-<%= @restaurant_names.each do |restaurant|   %>
-     <li> <%=  restaurant %> </li>
-       <%  end %> 
-
-
+  <%= @restaurant_lil_hash.each do |restaurant| %>
+    <li><%= restaurant[:name] %></li>
+    <li><%= restaurant[:address]%></li>
+    <li><%= restaurant[:cross_st]%></li>
+      <% end %>
 </ul>
+
+
+
+
+
+

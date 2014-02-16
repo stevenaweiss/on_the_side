@@ -22,13 +22,12 @@ before_action :load_ingredient, only: [:show, :edit, :update, :destroy, :neighbo
 
         #     end 
         @restaurant_lil_hash = data["response"]["groups"][0]["items"].map do |restaurant|  
-             
             {
-               :name => restaurant["venue"]["name"]
-               :addres => restaurant["venue"]["location"]["address"]
-               :cross_st => restaurant["venue"]["location"]["crossStreet"]
-
+               :name => restaurant["venue"]["name"],
+               :address => restaurant["venue"]["location"]["address"],
+               :cross_st => restaurant["venue"]["location"]["crossStreet"],
             }
+          end
         #binding.pry
       end
 
@@ -71,7 +70,5 @@ before_action :load_ingredient, only: [:show, :edit, :update, :destroy, :neighbo
         from_foursq = HTTParty.get(search_url)     
         #binding.pry
       end
-
-
 
 end
