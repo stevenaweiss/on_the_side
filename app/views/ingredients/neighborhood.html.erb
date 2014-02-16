@@ -1,12 +1,10 @@
-<h1>TEST!!!!</h1>
+<h1><%= @food %> in <%= @neighborhood %>!!!!</h1>
 
-<%= @neighborhood %>
-<%= @food %>
 
 
 <ul>
 
-<%= @restaurants.each do |restaurant|   %>
+<%= @restaurant_names.each do |restaurant|   %>
      <li> <%=  restaurant %> </li>
        <%  end %> 
 

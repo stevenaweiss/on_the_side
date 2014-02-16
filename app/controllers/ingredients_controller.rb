@@ -16,12 +16,20 @@ before_action :load_ingredient, only: [:show, :edit, :update, :destroy, :neighbo
         #call api HERE
         @neighborhood = params[:neighborhood]
         @food = @ingredient.name
-        #@restaurants = ["here", "there", "everywhere"]
         data = get_foursq(@food, @neighborhood)
-        @restaurants = data["response"]["groups"][0]["items"].map do |restaurant|  
-             restaurant["venue"]["name"]
-            end 
-        binding.pry
+        # @restaurant_names = data["response"]["groups"][0]["items"].map do |restaurant|  
+        #      "#{restaurant["venue"]["name"]} || " +"#{restaurant["venue"]["location"]["address"]} || " + "#{restaurant["venue"]["location"]["crossStreet"]}"
+
+        #     end 
+        @restaurant_lil_hash = data["response"]["groups"][0]["items"].map do |restaurant|  
+             
+            {
+               :name => restaurant["venue"]["name"]
+               :addres => restaurant["venue"]["location"]["address"]
+               :cross_st => restaurant["venue"]["location"]["crossStreet"]
+
+            }
+        #binding.pry
       end
 
       def new

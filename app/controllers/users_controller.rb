@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
 before_action :load_user, only: [:show, :edit, :update, :destroy]
-
+before_action :authenticate, :authorize, only: [:edit, :update]
 
   def new
     @user = User.new
@@ -13,7 +13,7 @@ before_action :load_user, only: [:show, :edit, :update, :destroy]
     if @user.save
       redirect_to user_path(@user)
     else
-      render(:new)
+      redirect_to login_path   #render(:new) #or 
     end
   end
 
@@ -36,6 +36,7 @@ end
 
   def destroy
     @user.destroy
+    session.destroy
     redirect_to root_path
   end
 
@@ -48,6 +49,18 @@ private
 
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
+  end
+
+  def authenticate
+    unless logged_in?
+      redirect_to login_path
+    end
+  end
+
+  def authorize
+    unless current_user == @user
+      redirect_to login_path
+    end
   end
 
 end
