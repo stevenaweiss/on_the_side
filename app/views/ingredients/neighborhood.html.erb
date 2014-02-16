@@ -3,5 +3,12 @@
 <%= @neighborhood %>
 <%= @food %>
 
-<%= @restaurants_list %>
 
+<ul>
+
+<%= @restaurants.each do |restaurant|   %>
+     <li> <%=  restaurant %> </li>
+       <%  end %> 
+
+
+</ul>

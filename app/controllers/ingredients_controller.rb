@@ -13,14 +13,13 @@ before_action :load_ingredient, only: [:show, :edit, :update, :destroy, :neighbo
       end
 
       def neighborhood
-        #binding.pry
         #call api HERE
         @neighborhood = params[:neighborhood]
         @food = @ingredient.name
         #@restaurants = ["here", "there", "everywhere"]
         data = get_foursq(@food, @neighborhood)
-        @restaurants_list = data["response"]["groups"][0]["items"].map do |restaurant|  
-            puts restaurant["venue"]["name"]
+        @restaurants = data["response"]["groups"][0]["items"].map do |restaurant|  
+             restaurant["venue"]["name"]
             end 
         binding.pry
       end
