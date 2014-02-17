@@ -9,4 +9,4 @@
   </div>
 
   </p>
-  <p><%= link_to "Check Out Our Super Trendy Ingredients!", ingredients_path %></p>
+  <p><%= link_to "Check Out Our Super Trendy Ingredients!", ingredients_path unless session[:user_id].nil?%></p>

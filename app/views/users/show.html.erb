@@ -1,5 +1,13 @@
 <h2>Welcome <%= @user.first_name %>!</h2>
 
+<P>list of fav's:</P>
+<% @restaurants.each do |restaurant| %>
+<a href="<%= restaurant.url %>"><%= restaurant.name %> </a>
+<%= restaurant.address %> </br>
+<% end %>
+
+
+
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 
 <%= form_tag user_path(@user), method: "delete" do %>

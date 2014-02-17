@@ -18,6 +18,8 @@ before_action :authenticate, :authorize, only: [:edit, :update]
   end
 
   def show
+    @restaurants = Restaurant.where(user_id: params[:id])
+    #binding.pry
   end
 
   def edit
