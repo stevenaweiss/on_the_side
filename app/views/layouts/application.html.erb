@@ -9,7 +9,9 @@
 <body>
 
   <header>
- 
+ <div id="logo">
+<h1>On The Side </h1>
+</div>
 
 <%= link_to "Home", root_path %>
 <p><%= link_to("Please Log In!","/login") if session[:user_id].nil? %></p>
