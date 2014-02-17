@@ -8,10 +8,12 @@ def new
 end
 
 def create
-  binding.pry
+  #binding.pry
   @restaurant = Restaurant.new(restaurant_params)
   #@restaurant.ingredient = @ingredient
-  redirect_to user_path(@user)
+  @restaurant.user_id = @current_user
+  @restaurant.save
+  redirect_to user_path(@current_user)
 end
 
 
@@ -22,14 +24,14 @@ def restaurant_params
   params.require(:restaurant).permit(:name, :address, :url, :user_id, :ingredient_id)
 end
 
-def load_user
-  @user = Session.find(params[:user_id])
-end
+# def load_user
+#   @user = Session.find(params[:user_id])
+# end
 
 
-def load_ingredient
-  @ingredient = Ingredient.find(params[:id])
-end
+#def load_ingredient
+  #@ingredient = Ingredient.find(params[:id])
+#end
 
 
 end

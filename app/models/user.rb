@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
     validates :password, presence: true
     self.has_secure_password()
 
+    has_many :restaurants
+
 
     
   

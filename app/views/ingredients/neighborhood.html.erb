@@ -11,6 +11,7 @@
           <%= hidden_field_tag :name, restaurant[:name] %>
           <%= hidden_field_tag :address, restaurant[:address] %>
           <%= hidden_field_tag :url, restaurant[:url] %>
+          <%= hidden_field_tag :ingredient_id, @ingredient.id %>
           <%= submit_tag("Save Restaurant" ) %>
         <% end %>
 
