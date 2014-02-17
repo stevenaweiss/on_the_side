@@ -43,11 +43,13 @@ class IngredientsController < ApplicationController
     end
 
     def update
-
+      @ingredient.update(ingredient_params)
+      redirect_to ingredients_path
     end
 
     def destroy
-
+      @ingredient.destroy
+      redirect_to ingredients_path
     end
 
     private

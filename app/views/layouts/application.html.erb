@@ -15,6 +15,7 @@
 <p><%= link_to("Please Log In!","/login") if session[:user_id].nil? %></p>
 <p><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></p>
 
+  
 
 </header>
 
