@@ -1,4 +1,4 @@
-<h1><%= @food %> in <%= @neighborhood %>!!!!</h1>
+<h1>The Best <%= @food %> near <%= @neighborhood %></h1>
 
 <ul>
 
@@ -17,6 +17,8 @@
         <% end %>
 
       <% end %>
+
+      <p><%= link_to "Back To Our Super Trendy Ingredients List", ingredients_path %></p>
 </ul>
 
 
