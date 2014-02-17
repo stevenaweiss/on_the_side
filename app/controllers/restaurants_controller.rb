@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
 
+  before_action :load_restaurant, only: [:destroy]
   def new
     @restaurant = Restaurant.new
   end
@@ -9,12 +10,21 @@ class RestaurantsController < ApplicationController
     redirect_to ingredients_path
   end
 
+  def destroy
+    @restaurant.destroy
+    redirect_to user_path(current_user)
+  end
+
 
 
   private
 
   def restaurant_params
     params.permit(:name, :address, :url, :user_id, :ingredient_id)
+  end
+
+  def load_restaurant
+    return @restaurant = Restaurant.find(params[:id])
   end
 
 

@@ -1,9 +1,12 @@
 <h2>Welcome <%= @user.first_name %>!</h2>
 
-<P>list of fav's:</P>
+<P>list of fav's: </P>
 <% @restaurants.each do |restaurant| %>
 <a href="<%= restaurant.url %>"><%= restaurant.name %> </a>
 <%= restaurant.address %> </br>
+  <%= form_tag restaurant_path(restaurant.id), method: "delete" do %>
+    <%= submit_tag("delete") %>
+    <% end %>
 <% end %>
 
 
