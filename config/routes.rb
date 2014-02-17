@@ -7,9 +7,8 @@ OnTheSide::Application.routes.draw do
       post :neighborhood
     end
   end
-  # get "/ingredients", to: "ingredients#search"
-  # post "/ingredients", to: "ingredients#search"
 
+  resources :restaurants
 
   get "/login", to: "sessions#new"
   post "/session", to: "sessions#create"

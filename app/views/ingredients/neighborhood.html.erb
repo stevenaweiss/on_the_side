@@ -1,10 +1,19 @@
 <h1><%= @food %> in <%= @neighborhood %>!!!!</h1>
 
 <ul>
+
   <%= @restaurant_lil_hash.each do |restaurant| %>
-    <li><%= restaurant[:name] %></li>
+    <li><a href="<%= restaurant[:url]%>"><%= restaurant[:name] %></a> </li>
     <li><%= restaurant[:address]%></li>
     <li><%= restaurant[:cross_st]%></li>
+
+        <%= form_tag "/restaurants" do  %>
+          <%= hidden_field_tag :name, restaurant[:name] %>
+          <%= hidden_field_tag :address, restaurant[:address] %>
+          <%= hidden_field_tag :url, restaurant[:url] %>
+          <%= submit_tag("Save Restaurant" ) %>
+        <% end %>
+
       <% end %>
 </ul>
 
