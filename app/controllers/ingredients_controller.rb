@@ -68,7 +68,7 @@ class IngredientsController < ApplicationController
   def get_foursq(ingredient, neighborhood)
     neighborhood_split = neighborhood.split(" ").join("+")
     ingredient_split = ingredient.split(" ").join("+")
-    search_url = "https://api.foursquare.com/v2/venues/explore?client_id=#{FOURSQ_CLIENT_ID}&client_secret=#{FOURSQ_CLIENT_SECRET}&v=20130815&v=20130815&near=#{neighborhood_split}+brooklyn&query=#{ingredient_split}&limit=5"
+    search_url = "https://api.foursquare.com/v2/venues/explore?client_id=#{FOURSQ_CLIENT_ID}&client_secret=#{FOURSQ_CLIENT_SECRET}&v=20130815&v=20130815&near=#{neighborhood_split}+new+york&query=#{ingredient_split}&limit=5"
     from_foursq = HTTParty.get(search_url)     
     #binding.pry
   end

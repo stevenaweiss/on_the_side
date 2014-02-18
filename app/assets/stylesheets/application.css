@@ -13,24 +13,32 @@
  */
 
 
- body {
+body {
   width:600px;
   margin:0px auto;
   text-align:center;
   padding:15px;
   border:1px solid #333;
   background-color:#eee;
+  font-family: 'Maven Pro', sans-serif;
   }
 
- ul  {
+ul {
 list-style-type: none;
 }
 
-#logo{
+img { 
+   border:1px solid #021a40;
+   border-radius: 2px;
+   margin-top: 2px;
+}
+
+
+#logo {
   text-align:right;
   color: #A3343A;
   font-size: 25px;
-  font-family: 'Nixie One', cursive;
+  font-family: 'Nixie One', sans-serif;
 }
 
   
