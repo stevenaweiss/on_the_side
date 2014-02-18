@@ -62,7 +62,7 @@ class IngredientsController < ApplicationController
   end
 
   def ingredient_params
-    params.require(:ingredient).permit(:name, :photo_url)
+    params.require(:ingredient).permit(:name, :photo_url, :description)
   end
 
   def get_foursq(ingredient, neighborhood)
@@ -73,16 +73,6 @@ class IngredientsController < ApplicationController
     #binding.pry
   end
 
-    # def get_instagram_id(foursq_id)
-    #   foursq_hash = Instagram.location_search(foursq_id)
-    #   foursq_hash[0]["id"]
-    # end
-
-    # def single_picture(location_id)
-    #   all_results = Instagram.location_recent_media(location_id)
-    #   all_results.sample["images"]["standard_resolution"]["url"]
-    #   #binding.pry
-    # end
   def single_picture(foursq_id)
     foursq_hash = Instagram.location_search(foursq_id)
     location_id = foursq_hash[0]["id"]

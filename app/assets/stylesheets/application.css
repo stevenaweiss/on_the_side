@@ -40,6 +40,20 @@ img {
   font-size: 25px;
   font-family: 'Nixie One', sans-serif;
 }
+#navcontainer ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+#navcontainer ul li { 
+  display: inline; 
+  padding: 10;
+}
+#ing_list li {
+  padding-bottom: 5px;
+}
 
   
 

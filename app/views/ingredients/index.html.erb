@@ -3,15 +3,18 @@
 <h2>Immediately</h2>
 <h4>(just do it already)</h4>
 
+<div id="ing_list">
 <ul>
   <%= @ingredients.each do |ingredient| %>
   <a href="/ingredients/<%= ingredient.id %>">
   <li><%= ingredient.name %></li>
   <li><img src="<%= ingredient.photo_url %>" width="400"></a></li>
   </a>
+  <li><%= ingredient.description %></li>
   <%end %>
 
 </ul>
+</div>
 
 <%= link_to "Add A New Ingredient!", new_ingredient_path %>
 

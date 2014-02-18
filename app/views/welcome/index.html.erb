@@ -1,12 +1,8 @@
 
 
 <div class="user_panel">
-  <p><%= link_to "Sign Up!", new_user_path if session[:user_id].nil?%>
-  </p>
-
-
-
-  </div>
+  <p><%= link_to "Sign Up!", new_user_path if session[:user_id].nil?%> </p>
+</div>
 
   </p>
   <p><%= link_to "Check Out Our Super Trendy Ingredients and Sides!", ingredients_path unless session[:user_id].nil?%></p>

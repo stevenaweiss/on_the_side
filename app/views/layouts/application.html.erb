@@ -16,20 +16,20 @@
 <h1>On The Side </h1>
 </div>
 
+<div id="navcontainer">
+<ul>
 <%= link_to "Home", root_path %>
-<p><%= link_to("Please Log In!","/login") if session[:user_id].nil? %></p>
-<p><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></p>
-<p><%= link_to("My Favs", user_path(current_user)) if logged_in? %></p>
+<li><%= link_to("Please Log In!","/login") if session[:user_id].nil? %></li>
+<li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
+<li><%= link_to("My Favs", user_path(current_user)) if logged_in? %></li>
+</ul>
 
-  
+  </div>
 
 </header>
 
 <%= yield %>
 
-<h5>Session: </h5>
-<%= debug session.to_hash %>
-<br/>
 
 </body>
 </html>
