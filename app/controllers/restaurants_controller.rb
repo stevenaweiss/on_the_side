@@ -7,7 +7,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.create(restaurant_params)
-    redirect_to ingredients_path
+    redirect_to user_path(current_user)
   end
 
   def destroy

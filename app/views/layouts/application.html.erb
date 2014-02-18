@@ -19,7 +19,7 @@
 <div id="navcontainer">
 <ul>
 
-<li><%= link_to("Please Log In!","/login") if session[:user_id].nil? %></li>
+<li><%= link_to("Log In","/login") if session[:user_id].nil? %></li>
 <li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
 <li><%= link_to("My Favs", user_path(current_user)) if logged_in? %></li>
 </ul>

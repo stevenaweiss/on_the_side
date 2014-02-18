@@ -1,31 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+On The Side 
 
-Things you may want to cover:
+GA WDI NYC Jan 14, project 1
 
-* Ruby version
+A curated list of super cool apps and side dishes to order right now, searchable by NY neighborhood.  
 
-* System dependencies
+https://www.pivotaltracker.com/s/projects/1015704
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+API's and Gems
+-Foursquare API
+-Instagram API
+-Instagram Gem
 
 
-Please feel free to use a different markup language if you do not plan to run
+
+
 <tt>rake doc:app</tt>.
 
 
-https://www.pivotaltracker.com/s/projects/1015704
