@@ -74,6 +74,7 @@ class IngredientsController < ApplicationController
   end
 
   def single_picture(foursq_id)
+    #binding.pry
     foursq_hash = Instagram.location_search(foursq_id)
     location_id = foursq_hash[0]["id"]
     all_results = Instagram.location_recent_media(location_id)
