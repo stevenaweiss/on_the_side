@@ -2,7 +2,7 @@
 
 <ul>
 
-  <%= @restaurant_lil_hash.each do |restaurant| %>
+  <% @restaurant_lil_hash.each do |restaurant| %>
     <li><a href="<%= restaurant[:url]%>"><%= restaurant[:name] %></a> </li>
     <img src="<%= restaurant[:image] %>" width="300"/>
     <li><%= restaurant[:address]%></li>

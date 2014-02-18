@@ -5,7 +5,7 @@
 
 <div id="ing_list">
 <ul>
-  <%= @ingredients.each do |ingredient| %>
+  <% @ingredients.each do |ingredient| %>
   <a href="/ingredients/<%= ingredient.id %>">
   <li><%= ingredient.name %></li>
   <li><img src="<%= ingredient.photo_url %>" width="400"></a></li>
