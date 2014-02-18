@@ -1,9 +1,9 @@
 require "instagram"
 
-    Instagram.configure do |config|
+Instagram.configure do |config|
 
-    config.client_id = "#{INSTA_CLIENT_ID}"
+  config.client_id = ENV['INSTA_CLIENT_ID']
 
-    config.client_secret = "#{INSTA_CLIENT_SECRET}"
+  config.client_secret = ENV['INSTA_CLIENT_SECRET']
 
-    end
+end

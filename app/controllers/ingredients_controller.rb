@@ -15,22 +15,20 @@ class IngredientsController < ApplicationController
   def neighborhood
     #call api HERE
     @neighborhood = params[:neighborhood]
-    @food = @ingredient.name
-    data = get_foursq(@food, @neighborhood)
-    @restaurant_lil_hash = data["response"]["groups"][0]["items"].map do |restaurant|  
+    data = get_foursq(@ingredient.name, @neighborhood)
+    @restaurant_lil_hash = data["response"]["groups"][0]["items"].map do |restaurant|
       {
        :name => restaurant["venue"]["name"],
        :address => restaurant["venue"]["location"]["address"],
        :cross_st => restaurant["venue"]["location"]["crossStreet"],
-       :url => restaurant["venue"]["url"]
-     }
-      end
-    #binding.pry
-  end
+       :url => restaurant["venue"]["url"],
+       :lat => restaurant["venue"]["location"]["lat"],
+       :lng => restaurant["venue"]["location"]["lng"],
+       :image => single_picture(restaurant["venue"]["id"].to_i)
+      }
+    end
 
-  # def gram
-  #    @gram = Instagram.media_search("40.682499","-73.993131")
-  # end
+  end
 
     def new
       @ingredient = Ingredient.new
@@ -72,6 +70,12 @@ class IngredientsController < ApplicationController
       search_url = "https://api.foursquare.com/v2/venues/explore?client_id=#{FOURSQ_CLIENT_ID}&client_secret=#{FOURSQ_CLIENT_SECRET}&v=20130815&v=20130815&near=#{neighborhood_split}+brooklyn&query=#{ingredient_split}&limit=5"
       from_foursq = HTTParty.get(search_url)     
       #binding.pry
+    end
+
+    def single_picture(location_id)
+      all_results = Instagram.location_recent_media(location_id)
+      all_results.sample["images"]["standard_resolution"]["url"]
+      binding.pry
     end
 
   end

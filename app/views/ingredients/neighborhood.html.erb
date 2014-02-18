@@ -1,24 +1,25 @@
-<h1>The Best <%= @food %> near <%= @neighborhood %></h1>
+<h1>The Best <%= @ingredient.name %> near <%= @neighborhood %></h1>
 
 <ul>
 
   <%= @restaurant_lil_hash.each do |restaurant| %>
     <li><a href="<%= restaurant[:url]%>"><%= restaurant[:name] %></a> </li>
+    <img src="<%= restaurant[:image] %>" width="300"/>
     <li><%= restaurant[:address]%></li>
     <li><%= restaurant[:cross_st]%></li>
 
-        <%= form_tag restaurants_path(@restaurant) do  %>
-          <%= hidden_field_tag :name, restaurant[:name] %>
-          <%= hidden_field_tag :address, restaurant[:address] %>
-          <%= hidden_field_tag :url, restaurant[:url] %>
-          <%= hidden_field_tag :ingredient_id, @ingredient.id %>
-          <%= hidden_field_tag :user_id, current_user.id %>
-          <%= submit_tag("Save Restaurant" ) %>
-        <% end %>
+    <%= form_tag restaurants_path(@restaurant) do  %>
+      <%= hidden_field_tag :name, restaurant[:name] %>
+      <%= hidden_field_tag :address, restaurant[:address] %>
+      <%= hidden_field_tag :url, restaurant[:url] %>
+      <%= hidden_field_tag :ingredient_id, @ingredient.id %>
+      <%= hidden_field_tag :user_id, current_user.id %>
+      <%= submit_tag("Save Restaurant" ) %>
+    <% end %>
 
-      <% end %>
+    <% end %>
 
-      <p><%= link_to "Back To Our Super Trendy Ingredients List", ingredients_path %></p>
+    <p><%= link_to "Back To Our Super Trendy Ingredients List", ingredients_path %></p>
 </ul>
 
 
