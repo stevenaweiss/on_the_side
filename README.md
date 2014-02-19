@@ -18,6 +18,8 @@ New York has always been a culinary destination.  More than the traditional "any
 *Instagram API
 *Instagram Gem
 *HTTParty
+*PostgreSQL Database
+*Authentication & Authorization from scratch using bcrypt-ruby
 
 ##User Stories Completed
 
