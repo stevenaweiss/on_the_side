@@ -2,8 +2,10 @@
 
 On The Side 
 
-GA WDI NYC Jan 14, project 1
+===================
 
+GA WDI NYC Jan 14, project 1
+-------------------------------
 A curated list of unexpected appetizers and side dishes to order right now, searchable by New York neighborhood.  
 
 
@@ -13,9 +15,9 @@ New York has always been a culinary destination.  More than the traditional "any
 https://www.pivotaltracker.com/s/projects/1015704
 
 API's and Gems
--Foursquare API
--Instagram API
--Instagram Gem
+*Foursquare API
+*Instagram API
+*Instagram Gem
 
 My initial goal with this project was to use the Yelp API to generate specific restaurant recommendations.  If we've spoken for more than 3 minutes I've probably suggested a place to eat.  After the initial API call results seemed a bit sketchy, I moved over to Foursquare, to greater success. 
 The Instagram API and Gem were great to work with, giving accurate results...if not exactly the ones I was looking for (I can't be held responsible for the appropriateness of peoples images tagged at certain locations.)
