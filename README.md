@@ -45,5 +45,10 @@ New York has always been a culinary destination.  More than the traditional "any
 [Full list of user stories on Pivotal Tracker](https://www.pivotaltracker.com/s/projects/1015704)
 
 
+[View App On Heroku](http://on-the-side.herokuapp.com)
+
+![ScreenShot](ERD.JPG)
+
+
 
 
