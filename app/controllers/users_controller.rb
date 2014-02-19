@@ -18,7 +18,11 @@ before_action :authenticate, :authorize, only: [:show, :edit, :update]
   end
 
   def show
+    # if @user.id == nil
+    #   redirect_to login_path
+    # else
     @restaurants = Restaurant.where(user_id: params[:id])
+    #end
     #binding.pry
   end
 
