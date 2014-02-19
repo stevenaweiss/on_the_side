@@ -1,7 +1,6 @@
-== README
-
+README
+===============
 On The Side 
-
 ===================
 
 GA WDI NYC Jan 14, project 1
