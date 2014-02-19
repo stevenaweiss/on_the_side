@@ -76,7 +76,7 @@ class IngredientsController < ApplicationController
   def single_picture(foursq_id)
     #binding.pry
     foursq_hash = Instagram.location_search(foursq_id)
-    #THIS IS WHERE THE ERROR IS
+    #THIS IS WHERE SHIT OCCASIONALLY BREAKS
     location_id = foursq_hash[0]["id"]
     all_results = Instagram.location_recent_media(location_id)
     all_results.sample["images"]["standard_resolution"]["url"]
