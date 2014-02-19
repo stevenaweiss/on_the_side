@@ -26,7 +26,7 @@ class IngredientsController < ApplicationController
        :lng => restaurant["venue"]["location"]["lng"].to_i,
        :image => single_picture(restaurant["venue"]["id"])
      }
-      #get_instagram_id(restaurant["venue"]["id"])
+
     end
 
   end
