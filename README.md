@@ -1,4 +1,4 @@
-README
+
 ===============
 On The Side 
 ===================
@@ -31,6 +31,6 @@ The associated Foursquare Venue ID is then used in conjunction with the Istagram
 The user can then save a favorite from the list of search results, and delete it if they decide the restaurant was terrible.  But that's on them.  
 
 
-<tt>rake doc:app</tt>.
+
 
 

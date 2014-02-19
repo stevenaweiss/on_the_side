@@ -12,14 +12,22 @@
  *= require_tree .
  */
 
+body{
+  background-color: #BFBFBF;
+  background: url(http://www.hdpaperwall.com/wp-content/uploads/2013/11/Brooklyn-Bridge-New-York-City-New-York-1-3OECWV6Y8G-1600x1200.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
-body {
+}
+#wrapper {
   width:600px;
   margin:0px auto;
   text-align:center;
   padding:15px;
   border:1px solid #333;
-  background-color:#eee;
+  background-color:#EDEDED;
   font-family: 'Maven Pro', sans-serif;
   }
 
@@ -33,12 +41,19 @@ img {
    margin-top: 2px;
 }
 
-
 #logo {
   text-align:right;
   color: #A3343A;
   font-size: 25px;
   font-family: 'Nixie One', sans-serif;
+  padding-bottom: 0px;
+}
+#logo h2 {
+  text-align:center;
+  color: #2E1B1C;
+  font-size: 20px;
+  font-family: 'Nixie One', sans-serif;
+  padding-top: -10px;
 }
 #navcontainer ul {
 margin: 0;
