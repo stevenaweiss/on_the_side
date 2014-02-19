@@ -15,8 +15,11 @@ New York has always been a culinary destination.  More than the traditional "any
 https://www.pivotaltracker.com/s/projects/1015704
 
 API's and Gems
+
 *Foursquare API
+
 *Instagram API
+
 *Instagram Gem
 
 My initial goal with this project was to use the Yelp API to generate specific restaurant recommendations.  If we've spoken for more than 3 minutes I've probably suggested a place to eat.  After the initial API call results seemed a bit sketchy, I moved over to Foursquare, to greater success. 
