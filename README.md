@@ -1,10 +1,9 @@
 
-===============
-On The Side 
-===================
 
-GA WDI NYC Jan 14, project 1
--------------------------------
+#On The Side 
+
+##GA WDI NYC Jan 14, project 1
+
 A curated list of unexpected appetizers and side dishes to order right now, searchable by New York neighborhood.  
 
 
