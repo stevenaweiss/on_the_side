@@ -13,12 +13,19 @@ New York has always been a culinary destination.  More than the traditional "any
 ##Technologies Used
 
 *Ruby 2.1.0
+
 *Ruby On Rails 4.0.2
+
 *Foursquare API
+
 *Instagram API
+
 *Instagram Gem
+
 *HTTParty
+
 *PostgreSQL Database
+
 *Authentication & Authorization from scratch using bcrypt-ruby
 
 ##User Stories Completed
