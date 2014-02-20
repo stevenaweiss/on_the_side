@@ -47,7 +47,7 @@ New York has always been a culinary destination.  More than the traditional "any
 
 [View App On Heroku](http://on-the-side.herokuapp.com)
 
-![ScreenShot](ERD.JPG)
+![ScreenShot](ERD2.JPG)
 
 
 
