@@ -21,23 +21,15 @@ module FoursquareHelper
        :image => single_picture(restaurant["venue"]["id"]),
        :static_map => google_map(restaurant["venue"]["location"]["lat"],restaurant["venue"]["location"]["lng"])
      }
-     #binding.pry
     end
   end
 
   #returns photo from instagram
   def single_picture(foursq_id)
-    #binding.pry
     foursq_hash = Instagram.location_search(foursq_id)
-    #binding.pry
     if foursq_hash.empty?
-      # flash[:notice] = "NOTHINNNNNNNNNNN"
-      #redirect_to root_path
       return "http://media.npr.org/assets/news/2010/01/30/tianshan2-1a2a29b83bc7a670bf8210d9c6daefa3ba46f971-s6-c30.jpg"
     else
-    #binding.pry
-    #instagram_location_id = foursq_hash[0]["id"]
-    #binding.pry
     all_results = Instagram.location_recent_media(foursq_hash[0]["id"])
     all_results.sample["images"]["standard_resolution"]["url"]
     end
