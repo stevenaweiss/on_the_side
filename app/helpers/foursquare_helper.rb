@@ -44,7 +44,7 @@ module FoursquareHelper
   end
 
   def google_map(lat, lng)
-    search_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=13&size=400x300&&markers=color:blue%7Clabel&sensor=false&key=#{GOOGLE_STATIC_KEY}"
+    search_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=13&size=400x300&markers=color:blue%7Clabel:X%7C#{lat},#{lng}&sensor=false&key=#{GOOGLE_STATIC_KEY}"
     return search_url
     #binding.pry
   end
