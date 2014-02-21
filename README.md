@@ -22,6 +22,8 @@ New York has always been a culinary destination.  More than the traditional "any
 
 *Instagram Gem
 
+*Google Static Maps API
+
 *HTTParty
 
 *PostgreSQL Database
