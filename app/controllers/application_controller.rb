@@ -12,13 +12,13 @@ class ApplicationController < ActionController::Base
     current_user.present?
   end
 
-   def admin?
-      if logged_in?
-        current_user.admin
-      else 
-        false
-      end
-    end 
+ def admin?
+    if logged_in?
+      current_user.admin
+    else 
+      false
+    end
+  end 
 
   # if logged_in? && admin?
   #   display stuff
