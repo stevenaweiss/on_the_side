@@ -31,7 +31,11 @@ module FoursquareHelper
       return "http://media.npr.org/assets/news/2010/01/30/tianshan2-1a2a29b83bc7a670bf8210d9c6daefa3ba46f971-s6-c30.jpg"
     else
     all_results = Instagram.location_recent_media(foursq_hash[0]["id"])
+    if all_results.empty?
+      return "http://media.npr.org/assets/news/2010/01/30/tianshan2-1a2a29b83bc7a670bf8210d9c6daefa3ba46f971-s6-c30.jpg"
+    else
     all_results.sample["images"]["standard_resolution"]["url"]
+    end
     end
   end
 
