@@ -12,23 +12,6 @@ class IngredientsController < ApplicationController
     render(:show)
   end
 
-  # def neighborhood
-  #   #call api HERE
-  #   @neighborhood = params[:neighborhood]
-  #   data = get_foursq(@ingredient.name, @neighborhood)
-  #   @restaurant_lil_hash = data["response"]["groups"][0]["items"].map do |restaurant|
-  #     {
-  #      :name => restaurant["venue"]["name"],
-  #      :address => restaurant["venue"]["location"]["address"],
-  #      :cross_st => restaurant["venue"]["location"]["crossStreet"],
-  #      :url => restaurant["venue"]["url"],
-  #      :lat => restaurant["venue"]["location"]["lat"].to_i,
-  #      :lng => restaurant["venue"]["location"]["lng"].to_i,
-  #      :image => single_picture(restaurant["venue"]["id"])
-  #    }
-  #   end
-  # end
-
   def new
     @ingredient = Ingredient.new
     render(:new)
@@ -40,6 +23,9 @@ class IngredientsController < ApplicationController
   end
 
   def edit
+    unless admin?
+      redirect_to ingredients_path
+    end
 
   end
 
@@ -62,20 +48,5 @@ class IngredientsController < ApplicationController
   def ingredient_params
     params.require(:ingredient).permit(:name, :photo_url, :description)
   end
-
-  # def get_foursq(ingredient, neighborhood)
-  #   neighborhood_split = neighborhood.split(" ").join("+")
-  #   ingredient_split = ingredient.split(" ").join("+")
-  #   search_url = "https://api.foursquare.com/v2/venues/explore?client_id=#{FOURSQ_CLIENT_ID}&client_secret=#{FOURSQ_CLIENT_SECRET}&v=20130815&v=20130815&near=#{neighborhood_split}+new+york&query=#{ingredient_split}&limit=5"
-  #   from_foursq = HTTParty.get(search_url)     
-  # end
-
-  # def single_picture(foursq_id)
-  #   foursq_hash = Instagram.location_search(foursq_id)
-  #   location_id = foursq_hash[0]["id"]
-  #   all_results = Instagram.location_recent_media(location_id)
-  #   all_results.sample["images"]["standard_resolution"]["url"]
-  # end
-    
 
 end

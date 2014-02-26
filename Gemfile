@@ -10,8 +10,6 @@ gem 'httparty'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
-gem 'pry-rails'
-
 gem 'instagram'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -53,3 +51,13 @@ gem 'annotate'
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails_12factor', group: :production
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end

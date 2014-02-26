@@ -6,5 +6,12 @@
   <%= submit_tag("submit!") %>
   <% end %>
 
+<% if admin? %> 
+<p><%= link_to "Edit", edit_ingredient_path(@ingredient) %></p>
+<%= form_tag ingredient_path(@ingredient), method: "delete" do %>
+  <%= submit_tag("Delete!") %>
+<% end %>
+<% end %>
+
 
 <p><%= link_to "Back To Our Super Trendy Apps and Sides Index!", ingredients_path %></p>
