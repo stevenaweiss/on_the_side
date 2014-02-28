@@ -26,7 +26,7 @@ body{
   width:600px;
   margin:0px auto;
   text-align:center;
-  padding:25px;
+  padding:15px;
   color: #3D1818;
   border:1px solid #333;
   background: url('creampaper.png');
@@ -35,13 +35,11 @@ body{
   }
 
 ul {
-  list-style-type: none;
-    list-style:none;
-    padding-left:0; 
+list-style-type: none;
 }
 
 img { 
-   border:1px solid #4F1F1F;
+   border:0.5px solid #021a40;
    border-radius: 4px;
    margin-top: 2px;
 }
