@@ -7,7 +7,7 @@
 <ul>
   <% @ingredients.each do |ingredient| %>
   <a href="/ingredients/<%= ingredient.id %>">
-  <li><%= ingredient.name %></li>
+  <li><h2><%= ingredient.name %><h2></li>
   <li><img src="<%= ingredient.photo_url %>" width="400"></a></li>
   </a>
   <li><%= ingredient.description %></li>
@@ -16,7 +16,9 @@
 </ul>
 </div>
 
+<% if admin? %> 
 <%= link_to "Add A New Dish!", new_ingredient_path %>
+<% end %>
 
 
 

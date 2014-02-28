@@ -13,8 +13,12 @@ class IngredientsController < ApplicationController
   end
 
   def new
-    @ingredient = Ingredient.new
-    render(:new)
+    if admin?
+      @ingredient = Ingredient.new
+      render(:new)
+    else
+      redirect_to ingredients_path
+    end
   end
 
   def create

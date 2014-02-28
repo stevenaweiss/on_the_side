@@ -1,13 +1,17 @@
 <h2>Oh Hey <%= @user.first_name %>!</h2>
 
-<P>list of fav's: </P>
-<% @restaurants.each do |restaurant| %>
-<a href="<%= restaurant.url %>"><%= restaurant.name %> </a>
-<%= restaurant.address %> </br>
-  <%= form_tag restaurant_path(restaurant.id), method: "delete" do %>
-    <%= submit_tag("delete") %>
-    <% end %>
-<% end %>
+<div id="favorites">
+  <p><h3>list of fav's:</h3> </p>
+  <% @restaurants.each do |restaurant| %>
+  <a href="<%= restaurant.url %>"><%= restaurant.name %> </a>
+  <%= restaurant.address %> </br>
+    <div id="delete">
+    <%= form_tag restaurant_path(restaurant.id), method: "delete" do %>
+      <%= submit_tag("delete") %>
+    </div>
+      <% end %>
+  <% end %>
+</div>
 
 
 

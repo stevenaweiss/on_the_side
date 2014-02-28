@@ -8,9 +8,14 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+
+
  */
+
+
+
+
+
 
 body{
   background-color: #BFBFBF;
@@ -53,7 +58,10 @@ img {
   color: #2E1B1C;
   font-size: 20px;
   font-family: 'Nixie One', sans-serif;
-  padding-top: -10px;
+  margin-top: -20px;
+}
+#logo h1{
+  padding-right: 20px;
 }
 #navcontainer ul {
 margin: 0;
@@ -67,7 +75,37 @@ text-align: center;
   padding: 10;
 }
 #ing_list li {
-  padding-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+#favorites {
+  border: 1px grey;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 21px 0px rgba(50, 50, 50, 0.34);
+  -moz-box-shadow:    2px 2px 21px 0px rgba(50, 50, 50, 0.34);
+  box-shadow:         2px 2px 21px 0px rgba(50, 50, 50, 0.34);.32);
+  padding-left: 15px;
+  padding-bottom: 10px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  background:#D2BA84;
+
+;
+}
+#favorites h3{
+  text-align: center;
+  padding-top: 10px;
+
+}
+#delete{
+  text-align: right;
+  position: relative;
+  padding-right: 20px;
+  bottom: 20px;
+}
+a:hover{
+  color:#A3343A;
 }
 
   

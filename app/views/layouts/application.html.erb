@@ -15,18 +15,17 @@
 
   <header>
  <div id="logo">
-<h1>On The Side </h1>
-<h2>New York Sides and Apps You Should Be Ordering. </h2>
-</div>
+    <h1>On The Side </h1>
+    <h2>New York Sides and Apps You Should Be Ordering. </h2>
+  </div>
 
-<div id="navcontainer">
-<ul>
+  <div id="navcontainer">
+    <ul>
 
-<li><%= link_to("Log In","/login") if session[:user_id].nil? %></li>
-<li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
-<li><%= link_to("My Favs", user_path(current_user)) if logged_in? %></li>
-</ul>
-
+    <li><%= link_to("Log In","/login") if session[:user_id].nil? %></li>
+    <li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
+    <li><%= link_to("My Favs", user_path(current_user)) if logged_in? %></li>
+    </ul>
   </div>
 
 </header>

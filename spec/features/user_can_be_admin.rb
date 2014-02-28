@@ -23,6 +23,7 @@ describe "a user can be an admin" do
     click_link ingredient.name
     expect(page).to_not have_link "Edit"
     expect(page).to_not have_button "Delete!"
+    logout(user)
     #save_and_open_page
   end
 
