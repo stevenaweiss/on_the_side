@@ -1,13 +1,18 @@
-<h1>The Best <%= @ingredient.name %> near <%= @neighborhood %></h1>
+<h1>The Best <%= @ingredient.name %> Near <%= params[:neighborhood] %></h1>
+
 
 <ul>
 
   <% @restaurant_lil_hash.each do |restaurant| %>
-    <li><a href="<%= restaurant[:url]%>"><%= restaurant[:name] %></a> </li>
-    <img src="<%= restaurant[:image] %>" width="300"/>
+    <li><h2><a href="<%= restaurant[:url]%>"><%= restaurant[:name] %></a></h2> </li>
+    <div id="instagrams">
+      <img src="<%= restaurant[:image] %>" width="300"/>
+    </div>
     <li><%= restaurant[:address]%></li>
     <li><%= restaurant[:cross_st]%></li>
-    <li><img src="<%= restaurant[:static_map] %>"></li>
+    <div id="google_map">
+      <li><img src="<%= restaurant[:static_map] %>"></li>
+    </div>
 
     <%= form_tag restaurants_path(@restaurant) do  %>
       <%= hidden_field_tag :name, restaurant[:name] %>

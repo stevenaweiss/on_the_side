@@ -13,6 +13,12 @@
  */
 
 
+
+
+
+
+
+
 body{
   background-color: #BFBFBF;
   background: url(http://drizly.com/blog/wp-content/uploads/2014/02/New-york-city.jpg) no-repeat center center fixed; 
@@ -27,8 +33,9 @@ body{
   margin:0px auto;
   text-align:center;
   padding:25px;
-  color: #3D1818;
+  color: #6B6767;
   border:1px solid #333;
+  border-radius: 3px;
   background: url('creampaper.png');
 /*   background-color:#EDEDED; */
   font-family: 'Maven Pro', sans-serif;
@@ -43,7 +50,9 @@ ul {
 img { 
    border:1px solid #4F1F1F;
    border-radius: 4px;
-   margin-top: 2px;
+  -webkit-box-shadow: 2px 2px 30px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow:    2px 2px 30px 0px rgba(50, 50, 50, 0.2);
+  box-shadow:         2px 2px 30px 0px rgba(50, 50, 50, 0.2);
 }
 
 #logo {
@@ -55,7 +64,7 @@ img {
 }
 #logo h2 {
   text-align:center;
-  color: #2E1B1C;
+  color: #6B6767;
   font-size: 20px;
   font-family: 'Nixie One', sans-serif;
   margin-top: -20px;
@@ -63,6 +72,7 @@ img {
 #logo h1{
   padding-right: 20px;
 }
+
 #navcontainer ul {
 margin: 0;
 padding: 0;
@@ -76,12 +86,6 @@ text-align: center;
 }
 #ing_list li {
   padding-bottom: 5px;
-}
-
-#ing_list img {
-  -webkit-box-shadow: 2px 2px 30px 0px rgba(50, 50, 50, 0.2);
-  -moz-box-shadow:    2px 2px 30px 0px rgba(50, 50, 50, 0.2);
-  box-shadow:         2px 2px 30px 0px rgba(50, 50, 50, 0.2);
 }
 
 #favorites {
@@ -107,6 +111,9 @@ text-align: center;
   position: relative;
   padding-right: 20px;
   bottom: 20px;
+}
+#google_map img{
+  margin: 10px;
 }
 a:hover{
   color:#A3343A;
