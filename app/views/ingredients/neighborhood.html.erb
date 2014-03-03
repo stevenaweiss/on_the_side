@@ -1,7 +1,7 @@
 <h1>The Best <%= @ingredient.name %> Near <%= params[:neighborhood] %></h1>
 
 
-<ul>
+<ul id="restaurant_list">
 
   <% @restaurant_lil_hash.each do |restaurant| %>
     <li><h2><a href="<%= restaurant[:url]%>"><%= restaurant[:name] %></a></h2> </li>

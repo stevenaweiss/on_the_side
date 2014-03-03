@@ -5,11 +5,19 @@ class IngredientsController < ApplicationController
 
   def index
     @ingredients = Ingredient.all
+    if current_user.nil?
+      redirect_to login_path
+    else
     render(:index)
+    end
   end
 
   def show
+    if current_user.nil?
+      redirect_to login_path
+    else
     render(:show)
+    end
   end
 
   def new
@@ -30,7 +38,6 @@ class IngredientsController < ApplicationController
     unless admin?
       redirect_to ingredients_path
     end
-
   end
 
   def update
