@@ -6,7 +6,9 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.create(restaurant_params)
+    @restaurant = Restaurant.new(restaurant_params)
+    unless current_user.restaurants.include?
+    @restaurant.save
     redirect_to user_path(current_user)
   end
 
