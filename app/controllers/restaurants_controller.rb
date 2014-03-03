@@ -7,7 +7,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    
+
     if current_user.restaurants.map(&:url).include? @restaurant.url
       flash[:error] = "You already saved this restaurant!"
       redirect_to user_path(current_user)

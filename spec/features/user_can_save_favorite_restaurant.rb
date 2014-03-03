@@ -10,9 +10,9 @@ describe "a user can save a favorite restaurant" do
     login(user)
     click_link "Check Out Our Super Trendy Apps and Sides!"
     click_link ingredient.name
-    fill_in :neighborhood, with: "Park Slope"
+    fill_in :neighborhood, with: "Carroll Gardens"
     click_button "submit!"
-    expect(page).to have_content "Park Slope"
+    expect(page).to have_content "Carroll Gardens"
     expect(page).to have_button "Save Restaurant"
     first(:button, "Save Restaurant").click
     
