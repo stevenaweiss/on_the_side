@@ -1,5 +1,8 @@
 <h2>Oh Hey <%= @user.first_name %>!</h2>
 
+
+<h2 class="errors" ><%= flash[:error] unless flash[:error].nil? %></h2>
+
 <div id="favorites">
   <p><h3>list of fav's:</h3> </p>
   <% @restaurants.each do |restaurant| %>

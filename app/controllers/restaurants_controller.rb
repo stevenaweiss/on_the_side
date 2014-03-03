@@ -7,9 +7,14 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    unless current_user.restaurants.include?
-    @restaurant.save
-    redirect_to user_path(current_user)
+    
+    if current_user.restaurants.map(&:url).include? @restaurant.url
+      flash[:error] = "You already saved this restaurant!"
+      redirect_to user_path(current_user)
+    else
+      @restaurant.save
+      redirect_to user_path(current_user)
+    end
   end
 
   def destroy
@@ -17,6 +22,10 @@ class RestaurantsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  # def in_db?
+  #   @restaurants = Restaurant.all
+  #   @restaurants.include(@restaurant.url)
+  # end
 
 
   private
