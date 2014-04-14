@@ -1,22 +1,23 @@
+<p>
 <%= form_for @user do |f| %>
   <%= f.label :email %>
   <%= f.email_field :email %>
-</br>
-
+</p>
+<p>
 <%= f.label :password %>
 <%= f.password_field :password %>
-</br>
+</p>
+<p>
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation %><br/>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %><br/>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+<p/>
+<p>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+<p/>
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br/>
-
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <br/>
-
-  <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
+<%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
 <% end %>

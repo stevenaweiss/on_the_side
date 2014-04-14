@@ -13,7 +13,7 @@ describe "A user can search for restaurants in a neighborhood" do
     fill_in :neighborhood, with: "Park Slope"
     click_button "submit!"
     expect(page).to have_button "Save Restaurant"
-    save_and_open_page
+    #save_and_open_page
     first(:button, "Save Restaurant").click
 
 

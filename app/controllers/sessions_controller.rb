@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-
-
   def new
   end
 
@@ -10,12 +8,10 @@ class SessionsController < ApplicationController
     if user && (user.authenticate(params[:password]) ) 
       
       session[:user_id] = user.id
-      
-      redirect_to( user_path(user) )  #or to index or wherever
+      redirect_to( user_path(user) ) 
     else
-      #render :text => "Wrong"
-      #@message = "We don't have that combo!"
-      redirect_to root_path
+      flash[:login_error] = "Sorry, we don't have that combo"
+      redirect_to login_path
     end
 
   end

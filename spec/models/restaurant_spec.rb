@@ -16,7 +16,7 @@ describe Restaurant do
     expect( user_1.restaurants ).to_not include(restaurant_2)
   end  
 
-  it "can't save the same restaurant twice to a users favorites" do
-    expect( user_1.restaurants )
-  end
+  # it "can't save the same restaurant twice to a users favorites" do
+  #   expect( user_1.restaurants )
+  # end
 end

@@ -1,15 +1,16 @@
+<p>
 <%= form_for @ingredient do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-</br>
-
+</p>
+<p>
 <%= f.label :photo_url %>
 <%= f.text_field :photo_url %>
-</br>
-
+</p>
+<p>
 <%= f.label :description %>
 <%= f.text_area :description, size:"20x5" %>
-</br>
+</p>
 
   <%= f.submit @ingredient.id.nil? ? "Add!" : "Save Changes" %>
 <% end %>
