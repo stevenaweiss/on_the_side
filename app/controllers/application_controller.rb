@@ -20,8 +20,5 @@ def admin?
   end
 end 
 
-  # if logged_in? && admin?
-  #   display stuff
-
   helper_method :current_user, :logged_in?, :admin?
 end
