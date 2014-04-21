@@ -22,12 +22,6 @@ class RestaurantsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  # def in_db?
-  #   @restaurants = Restaurant.all
-  #   @restaurants.include(@restaurant.url)
-  # end
-
-
   private
 
   def restaurant_params

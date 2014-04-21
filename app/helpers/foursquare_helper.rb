@@ -16,8 +16,8 @@ module FoursquareHelper
        :address => restaurant["venue"]["location"]["address"],
        :cross_st => restaurant["venue"]["location"]["crossStreet"],
        :url => restaurant["venue"]["url"],
-       :lat => restaurant["venue"]["location"]["lat"], #to_i??
-       :lng => restaurant["venue"]["location"]["lng"], #.to_i
+       :lat => restaurant["venue"]["location"]["lat"], 
+       :lng => restaurant["venue"]["location"]["lng"], 
        :image => single_picture(restaurant["venue"]["id"]),
        :static_map => google_map(restaurant["venue"]["location"]["lat"],restaurant["venue"]["location"]["lng"])
      }
@@ -42,7 +42,6 @@ module FoursquareHelper
   def google_map(lat, lng)
     search_url = "http://maps.googleapis.com/maps/api/staticmap?center=#{lat},#{lng}&zoom=13&size=400x300&markers=color:blue%7Clabel:X%7C#{lat},#{lng}&sensor=false&key=#{GOOGLE_STATIC_KEY}"
     return search_url
-    #binding.pry
   end
 
 
