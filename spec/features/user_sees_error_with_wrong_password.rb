@@ -10,10 +10,6 @@ describe "A user can't login with an incorrect password" do
     fill_in :password, with: "muffins"
     click_button "Log In!"
     expect(page).to have_content("Sorry, we don't have that combo")
-    
-
-    
-
   end
 
   def login(user)

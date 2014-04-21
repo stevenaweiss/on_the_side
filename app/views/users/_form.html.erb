@@ -4,20 +4,20 @@
   <%= f.email_field :email %>
 </p>
 <p>
-<%= f.label :password %>
-<%= f.password_field :password %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
 </p>
 <p>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation %><br/>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br/>
 
-<%= f.label :first_name %>
-<%= f.text_field :first_name %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
 <p/>
 <p>
-<%= f.label :last_name %>
-<%= f.text_field :last_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
 <p/>
 
-<%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
+  <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
 <% end %>

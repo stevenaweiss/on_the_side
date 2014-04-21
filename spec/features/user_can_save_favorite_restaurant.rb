@@ -19,7 +19,6 @@ describe "a user can save a favorite restaurant" do
     within "#favorites" do 
       expect(page).to have_button "delete"
       click_button "delete"
-      #save_and_open_page 
       #todo - get restaurant info???
     end
 

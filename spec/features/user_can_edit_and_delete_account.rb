@@ -15,10 +15,6 @@ describe "A user can edit and delete their account" do
     expect(page).to have_content "Billbo"
     click_button "Rid My Life Of This Account"
     expect(page).not_to have_content "Billbo"
-
-
-    #save_and_open_page
-
   end
 
   def login(user)

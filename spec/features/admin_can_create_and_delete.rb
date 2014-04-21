@@ -20,8 +20,6 @@ describe "an admin can create and delete ingredients" do
     fill_in :ingredient_description, with: "totally awesome"
     click_button "Save Changes"
     expect(page).to have_content("totally awesome")
-    #save_and_open_page
-
   end  
 
 

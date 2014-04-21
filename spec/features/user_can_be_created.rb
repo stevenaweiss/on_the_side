@@ -17,7 +17,6 @@ describe "A user can create an account" do
     click_button "Log In!"
     expect(page).to have_content user.first_name
     logout(user)
-    #save_and_open_page
   end
 
 

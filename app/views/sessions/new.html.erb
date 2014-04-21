@@ -2,7 +2,6 @@
 
 <h2 class="errors" ><%= flash[:login_error] unless flash[:login_error].nil? %></h2>
 
-
 <%= form_tag "/session" do %>
 <%= label_tag :email %>
 <%= email_field_tag :email %>
