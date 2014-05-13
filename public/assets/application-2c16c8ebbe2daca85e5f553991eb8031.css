@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+
+body{
+  background-color: #BFBFBF;
+  background: url('new-york-city-skyline.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+#wrapper {
+  width:600px;
+  margin:0px auto;
+  text-align:center;
+  padding:25px;
+  color: #6B6767;
+  border:1px solid #333;
+  border-radius: 3px;
+  background-image: url('creampaper.png');
+/*   background-color:#EDEDED; */
+  font-family: 'Maven Pro', sans-serif;
+  }
+
+ul {
+  list-style-type: none;
+    list-style:none;
+    padding-left:0; 
+}
+
+img { 
+   border:1px solid #4F1F1F;
+   border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 30px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow:    2px 2px 30px 0px rgba(50, 50, 50, 0.2);
+  box-shadow:         2px 2px 30px 0px rgba(50, 50, 50, 0.2);
+}
+
+#logo {
+  text-align:right;
+  color: #A3343A;
+  font-size: 25px;
+  font-family: 'Nixie One', sans-serif;
+  padding-bottom: 0px;
+}
+#logo h2 {
+  text-align:center;
+  color: #6B6767;
+  font-size: 20px;
+  font-family: 'Nixie One', sans-serif;
+  margin-top: -20px;
+}
+#logo h1{
+  padding-right: 20px;
+}
+
+#navcontainer ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+#navcontainer ul li { 
+  display: inline; 
+  padding: 10;
+}
+#ing_list li {
+  padding-bottom: 5px;
+}
+
+#favorites {
+  border: 1px black;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 21px 0px rgba(50, 50, 50, 0.34);
+  -moz-box-shadow:    2px 2px 21px 0px rgba(50, 50, 50, 0.34);
+  box-shadow:         2px 2px 21px 0px rgba(50, 50, 50, 0.34);
+  padding-left: 15px;
+  padding-bottom: 10px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  background: url('linedpaper.png');
+}
+#favorites h3{
+  text-align: center;
+  padding-top: 10px;
+
+}
+#delete{
+  text-align: right;
+  position: relative;
+  padding-right: 20px;
+  bottom: 20px;
+}
+#google_map img{
+  margin: 10px;
+}
+a:hover{
+  color:#A3343A;
+}
+.errors{
+  color: red;
+}
+
+  
+
+ 
